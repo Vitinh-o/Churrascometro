@@ -1,0 +1,225 @@
+body{font-family:Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(39, 38, 38);}
+
+header{background-color: rgb(241, 241, 241);
+        padding-top: 40px;
+        padding-bottom: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;}
+
+
+h1{margin-top: 0;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Pacifico', cursive;}
+
+    
+#headerDireito{float: right;
+                font-size: 1.5rem;}
+
+.menu{display: inline;
+        margin-right: 20px;
+        }
+
+a{color: black;
+        list-style: none;
+        font-weight: bold;}
+
+
+main{background-image: url(./imagens/grill-background-barbecue-fire-grill-close-up-isolated-on-black-background_Easy-Resize.com.jpg);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center;
+                            height: 1200px;
+                            color: white;
+                            overflow: hidden;
+                            }
+
+
+.background{background-color: rgba(7, 6, 6, 0.808);
+                width: 100%;
+                height: 100%;}
+
+.estiloMenu{position: relative;
+                top: 300px;}
+
+footer{color: white;
+        padding: 50px;
+        text-align: center;}
+
+ul{text-align: center;}
+
+.itemDoMenu{display: inline; 
+    margin-right: 100px;}
+
+.numeros{color: black;
+    background-color: white;
+    border-radius:100%;
+    padding: 25px;
+    font-weight: bold;
+    display:inline-block;}
+
+#alteraCor1{background-color: green;
+                color: white;}
+
+h2{display: inline-block;
+    font-size: 1.6rem;
+    }
+
+.estiloPessoas{ text-align: center; 
+                position: relative;
+                top: 500px;
+                }
+
+.estiloDuracao{text-align: center; 
+                position: relative;
+                top: 500px;
+                display: none;}
+
+.estiloBebem{text-align: center; 
+                position: relative;
+                top: 500px;
+                display: none;}
+
+.estiloResultado{background-color: rgb(255, 255, 255);
+                        height: 600px;
+                        width: 50%;
+                        margin: auto;
+                        display: none;
+                        transform: translateY(+50%);
+                        color: black;
+                        text-align: center;
+                        border-radius: 45px;}
+
+
+#teste{line-height: 350px;}
+
+
+label{display: inline-block; 
+        font-weight: bolder;
+        font-size: 1.6rem;
+        margin-left: 35px ;}
+
+
+input{border-radius: 50px;
+        height: 70px;
+        width: 140px;
+        text-align: center;
+        display:inline-block;}
+
+input[type="number"] {
+            font-size: 40px;}
+
+button{display: block;
+        font-size: 1.4rem;
+        padding: 23px;
+        border-radius: 8px;
+        border-style: none;
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        margin-top: 200px;
+        margin-left: 50%;
+        transform: translateX(-50%); }
+
+button:hover{cursor:pointer;
+                background-color: rgb(124, 10, 10);}
+
+
+@media (max-height: 1200px) {
+        header{position: static;}
+}
+
+
+@media (max-width: 1275px) {
+
+        header{position: static;}
+
+        .itemDoMenu{display: block;}
+
+        input{display: block;
+                margin-left: 50%;
+                transform: translateX(-50%);}
+        
+        label{margin-left: 0px;
+                margin-top: 20px;}
+
+        .estiloMenu{position: relative;
+                        top: 150px;}
+
+        .estiloPessoas{ text-align: center; 
+                position: relative;
+                top: 150px;
+                }
+        
+        .estiloDuracao{text-align: center; 
+                        position: relative;
+                        top: 150px;
+                        display: none;}
+        
+        .estiloBebem{text-align: center; 
+                        position: relative;
+                        top: 150px;
+                        display: none;}
+
+        button{margin-top: 80px;}
+        
+        .estiloResultado{height: 300px;
+                                width: 80%;}
+
+
+        #teste{line-height: 150px;}
+}
+
+
+@media (max-width: 830px){
+
+main{height: 1400px;}
+
+.menu{margin-right:0px;
+        display: block;
+        }
+
+.estiloMenu{position: relative;
+                top: 10px;}
+
+#headerDireito{float: none;
+                margin-left: -40px;
+                text-align: center;
+                font-size: 4vw;}
+
+h1{text-align: center;
+        font-size: 6vw;
+        display: block;}
+
+h2{display: block;}
+
+.itemDoMenu{margin: 0px;
+        margin-left: -40px;
+        text-align: center;}
+
+
+.estiloPessoas{ text-align: center; 
+                position: relative;
+                top: 40px;}
+
+.estiloDuracao{text-align: center; 
+                        position: relative;
+                        top: 40px;
+                        display: none;}
+
+.estiloBebem{text-align: center; 
+                        position: relative;
+                        top: 40px;
+                        display: none;}
+        
+#teste{line-height: 50px;}
+
+        
+} 
+

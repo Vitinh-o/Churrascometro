@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churrascômetro</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="./imagens/churrasqueira.png">
+</head>
+<body>
+
+    <header>
+
+        <h1> CHURRASCÔMETRO </h1>
+
+        <ul id="headerDireito">
+            
+            <li class="menu"> <a href="#conteudoPrincipal"> Calculadora</a></li>
+            
+            <li class="menu"><a href="#sobre"> Sobre nós</a></li>
+
+        </ul>
+
+        
+    </header>
+
+    <main id="conteudoPrincipal">
+
+        <div class="background">
+            
+            <section id="menuSuperior" class="estiloMenu">
+
+                <ul>
+                    <li class="itemDoMenu"> <p class="numeros" id="alteraCor1">1 </p> 
+                        <h2>Quantidade de pessoas?</h2>
+                    </li>
+
+                    <li class="itemDoMenu"> <p class="numeros" id="alteraCor2"> 2 </p>
+                        <h2>Quantas pessoas bebem cerveja?</h2>
+                    </li>
+
+                    <li class="itemDoMenu"> <p class="numeros" id="alteraCor3">3</p> 
+                        <h2>duração em horas</h2></li>
+
+                    <li class="itemDoMenu"> <p class="numeros" id="alteraCor4">4</p> 
+                            <h2>resultado</h2></li>
+
+                </ul>
+
+
+            </section>
+
+            <section id="qtdPessoas" class="estiloPessoas">
+
+                <form action="">
+
+                    <label for="homens">Homens: </label>
+                    <input type="number" id="qtdHomens" min="0" value="0" required>
+
+                    <label for="homens">Mulheres:</label>
+                    <input type="number" id="qtdMulheres" min="0" value="0" required>
+
+                    <label for="homens">Crianças:</label>
+                    <input type="number" id="qtdCriancas" min="0" value="0" required>    
+
+                </form> 
+
+                <button class="estiloBotao" onclick="construtor();  alterarElementosBebem()">Próximo</button>
+
+            </section>
+
+            <section id="bebem" class="estiloBebem">
+
+                <form action="">
+
+                    <label for="homens">Pessoas que bebem: </label>
+                    <input type="number" id="qtdBebida" min="0" value="0" required>
+                    
+                </form> 
+
+                <button class="estiloBotao"  onclick="construtor();  alterarElementosDuracao()" >Próximo</button >
+
+            </section>
+
+            <section id="duracao" class="estiloDuracao">
+
+                <form action="">
+
+                    <label for="homens">Duração média em horas: </label required>
+                    <input type="number" min="0" value="0" id="duracaoTotal">
+
+                </form> 
+
+                <button class="estiloBotao" onclick="construtor(); calculo()">Calcular</button>
+
+            </section>
+        
+            
+            <section id="resultado" class="estiloResultado">
+
+
+            </section>
+               
+        </div>
+    </main>
+
+    <footer id="sobre">
+
+        <h3>Sobre</h3>
+
+        <p>O projeto Churrascômetro é um projeto voltado a prática de uma integração simples de um página web utilizando-se de html, css e javascript.
+            O projeto realiza um cálculo médio de quanto será necessário de carne e bebidas para um churrasco. 
+        </p>
+
+    </footer>
+
+
+<script src="/script.js"></script>    
+</body>
+</html>
