@@ -35,18 +35,18 @@
             <section id="menuSuperior" class="estiloMenu">
 
                 <ul>
-                    <li class="itemDoMenu"> <p class="numeros" id="alteraCor1">1 </p> 
+                    <li class="itemDoMenu" id="1" onclick="construtor(); alterarItem(this); "> <p class="numeros alteraCor1">1 </p> 
                         <h2>Quantidade de pessoas?</h2>
                     </li>
 
-                    <li class="itemDoMenu"> <p class="numeros" id="alteraCor2"> 2 </p>
+                    <li class="itemDoMenu" id="2" onclick="construtor(); alterarItem(this); "> <p class="numeros alteraCor2" > 2 </p>
                         <h2>Quantas pessoas bebem cerveja?</h2>
                     </li>
 
-                    <li class="itemDoMenu"> <p class="numeros" id="alteraCor3">3</p> 
+                    <li class="itemDoMenu" id="3" onclick="construtor(); alterarItem(this); "> <p class="numeros alteraCor3" >3</p> 
                         <h2>duração em horas</h2></li>
 
-                    <li class="itemDoMenu"> <p class="numeros" id="alteraCor4">4</p> 
+                    <li class="itemDoMenu" id="4" onclick="construtor(); alterarItem(this); calculo();  "> <p class="numeros alteraCor4">4</p> 
                             <h2>resultado</h2></li>
 
                 </ul>
@@ -69,7 +69,7 @@
 
                 </form> 
 
-                <button class="estiloBotao" onclick="construtor();  alterarElementosBebem()">Próximo</button>
+                <button class="estiloBotao" id="5" onclick="construtor();  alterarItem(this)">Próximo</button>
 
             </section>
 
@@ -82,7 +82,7 @@
                     
                 </form> 
 
-                <button class="estiloBotao"  onclick="construtor();  alterarElementosDuracao()" >Próximo</button >
+                <button class="estiloBotao" id="6"  onclick="construtor();  alterarItem(this)" >Próximo</button >
 
             </section>
 

@@ -62,7 +62,8 @@ ul{text-align: center;}
     border-radius:100%;
     padding: 25px;
     font-weight: bold;
-    display:inline-block;}
+    display:inline-block;
+    cursor: pointer;}
 
 #alteraCor1{background-color: green;
                 color: white;}

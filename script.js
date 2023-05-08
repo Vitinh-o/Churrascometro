@@ -1,12 +1,8 @@
-var inputHomem
-            
-var inputMulher
-
-var inputCriancas
-
-var inputBebida
-    
-var inputDuracao
+var inputHomem = 0
+var inputMulher = 0
+var inputCriancas = 0
+var inputBebida = 0
+var inputDuracao = 0
 
 function construtor(){
     
@@ -20,33 +16,34 @@ function construtor(){
             
         inputDuracao = document.getElementById("duracaoTotal").value    
 
-        console.log(inputDuracao)
-        console.log(inputBebida)
-        console.log(inputCriancas)
-        console.log(inputMulher)
-        console.log(inputHomem)
-
 }
 
 function calculo(){
 
-    let mediaCarne = ( (400 * inputHomem)  + (400 * inputMulher) + (200 * inputCriancas) ) * inputDuracao  
+        let mediaCarne = ( (400 * inputHomem)  + (400 * inputMulher) + (200 * inputCriancas) ) * inputDuracao  
 
-    let mediaBebida = (500 * inputBebida) * inputDuracao
+        let mediaBebida = (500 * inputBebida) * inputDuracao
 
 
-    colocarNoHtml(mediaCarne, mediaBebida)
-    // console.log(inputHomem)
-    // console.log(inputDuracao)
+        if((inputHomem != 0  || inputMulher != 0 || inputCriancas != 0 || inputDuracao != 0) && (inputDuracao != 0 )){
+            colocarNoHtml(mediaCarne, mediaBebida)
+        }
+        else{
 
-}
+            let  resultados = document.getElementById("resultado")
+            resultados.style.display = "none"
+            
+        }
+
+
+    }
 
 
 function colocarNoHtml(mediaCarne, mediaBebida){
 
     let resultados = document.getElementById("resultado")
     let  duracao = document.getElementById("duracao")
-    let numero = document.getElementById("alteraCor3")
+    let numero = document.getElementsByClassName("alteraCor3")[0]
 
     // console.log(resultados);
 
@@ -57,7 +54,7 @@ function colocarNoHtml(mediaCarne, mediaBebida){
     numero.style.backgroundColor = "white"
     numero.style.color = "black"
 
-    numero = document.getElementById("alteraCor4")
+    numero = document.getElementsByClassName("alteraCor4")[0]
 
     numero.style.backgroundColor = "green"
     numero.style.color = "white"
@@ -68,48 +65,173 @@ function colocarNoHtml(mediaCarne, mediaBebida){
 
 }
 
-function alterarElementosBebem(){
+function alterarItem(numero){
 
+    let numeroPego = numero.id
+    let alterarEstiloElementos = document.getElementsByClassName("numeros")
     let bebem = document.getElementById("bebem")
-    let  pessoas = document.getElementById("qtdPessoas")
-    let numero = document.getElementById("alteraCor1")
-
-    numero.style.backgroundColor = "white"
-    numero.style.color = "black"
-
-    numero = document.getElementById("alteraCor2")
-
-    numero.style.backgroundColor = "green"
-    numero.style.color = "white"
+    let duracao = document.getElementById("duracao") 
+    let media = document.getElementById("resultado")
+    let qtdPessoas = document.getElementById("qtdPessoas")
 
 
-    pessoas.style.display = "none"
+    switch(numeroPego){
+
+        case "1":
+
+            for (var i = 0; i < alterarEstiloElementos.length; i++){
+                
+                alterarEstiloElementos[i].style.backgroundColor = "white"
+                alterarEstiloElementos[i].style.color = "black"
+
+            }
+
+            numero = document.getElementsByClassName("alteraCor1")[0]
+
+            numero.style.backgroundColor = "green"
+            numero.style.color = "white"
+
+            bebem = document.getElementById("bebem")
+            duracao = document.getElementById("duracao") 
+            media = document.getElementById("resultado")
+            qtdPessoas = document.getElementById("qtdPessoas")
+
+            bebem.style.display = "none"
+            duracao.style.display = "none"
+            media.style.display = "none"
+            qtdPessoas.style.display = "block"
+
+        break
 
 
-    bebem.style.display = "block"
-    
+        case "2":
+
+            if(inputHomem != 0 || inputMulher != 0 || inputCriancas != 0){
+
+                    for (var i = 0; i < alterarEstiloElementos.length; i++){
+                        
+                        alterarEstiloElementos[i].style.backgroundColor = "white"
+                        alterarEstiloElementos[i].style.color = "black"
+
+                    }
+
+                    numero = document.getElementsByClassName("alteraCor2")[0]
+
+                    numero.style.backgroundColor = "green"
+                    numero.style.color = "white"
+
+                    bebem.style.display = "block"
+                    duracao.style.display = "none"
+                    media.style.display = "none"
+                    qtdPessoas.style.display = "none"
+
+                    }
+
+            else{alert("Insira ao menos uma pessoa")}
+
+
+        break
+
+        case "3":
+
+            if( inputHomem != 0 || inputMulher != 0 || inputCriancas != 0 ){
+
+                for (var i = 0; i < alterarEstiloElementos.length; i++){
+                    
+                    alterarEstiloElementos[i].style.backgroundColor = "white"
+                    alterarEstiloElementos[i].style.color = "black"
+
+                }
+
+                numero = document.getElementsByClassName("alteraCor3")[0]
+
+                numero.style.backgroundColor = "green"
+                numero.style.color = "white"
+
+                bebem.style.display = "none"
+                duracao.style.display = "block"
+                media.style.display = "none"
+                qtdPessoas.style.display = "none"
+
+            }
+            else{alert("Insira ao menos uma pessoa")}
+
+        break
+
+        case "4":
+
+            if( (inputHomem != 0  || inputMulher != 0 || inputCriancas != 0) && (inputDuracao != 0) ){
+
+
+                for (var i = 0; i < alterarEstiloElementos.length; i++){
+                    
+                    alterarEstiloElementos[i].style.backgroundColor = "white"
+                    alterarEstiloElementos[i].style.color = "black"
+
+                }
+
+                numero = document.getElementsByClassName("alteraCor4")[0]
+
+                numero.style.backgroundColor = "green"
+                numero.style.color = "white"
+
+                bebem.style.display = "none"
+                duracao.style.display = "none"
+                media.style.display = "block"
+                qtdPessoas.style.display = "none"
+            }
+            else{
+
+                alert("Insira ao menos uma pessoas ou insera a quantidade de horas para o churrasco")
+
+            }
+
+
+        break
+
+        case "5":
+
+
+            if(inputHomem != 0 || inputMulher != 0 || inputCriancas != 0){
+
+                alterarEstiloElementos[0].style.backgroundColor = "white"
+                alterarEstiloElementos[0].style.color = "black"
+
+                numero = document.getElementsByClassName("alteraCor2")[0]
+
+                numero.style.backgroundColor = "green"
+                numero.style.color = "white"
+
+                bebem.style.display = "block"
+                qtdPessoas.style.display = "none"
+
+            }
+            else(alert("Por favor insira ao menos uma pessoa"))
+
+        break
+
+        case "6":    
+                    
+                alterarEstiloElementos[1].style.backgroundColor = "white"
+                alterarEstiloElementos[1].style.color = "black"
+
+                numero = document.getElementsByClassName("alteraCor3")[0]
+
+                numero.style.backgroundColor = "green"
+                numero.style.color = "white"
+
+                bebem.style.display = "none"
+                duracao.style.display = "block"
+
+            
+        break
+
+        default:
+
+            alert("Ocorreu um problema na hora de calcular os valores, por favor tente novamente mais tarde")    
+
+
+    }
+
 
 }
-
-
-
-function alterarElementosDuracao(){
-
-    let duracao = document.getElementById("duracao")
-    let  bebem = document.getElementById("bebem")
-    let numero = document.getElementById("alteraCor2")
-
-    numero.style.backgroundColor = "white"
-    numero.style.color = "black"
-
-    numero = document.getElementById("alteraCor3")
-
-    numero.style.backgroundColor = "green"
-    numero.style.color = "white"
-
-    duracao.style.display = "block"
-    
-    bebem.style.display = "none"
-
-}
-
